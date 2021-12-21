@@ -10,6 +10,7 @@
     <script src="https://code.highcharts.com/maps/modules/data.js"></script>
     <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/mapdata/custom/world-eckert3-highres.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
 
     <script src="script.js" type="module"></script>
     <script src="lib.js" type="module"></script>
@@ -17,9 +18,11 @@
 </head>
 <body>
 
+    <h1 id="country-display"></h1>
     <figure class="highcharts-figure">
         <div id="container"></div>
     </figure>
+    <p id="feedback"></p>
 
 </body>
 </html>
