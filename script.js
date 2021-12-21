@@ -22,10 +22,13 @@ document.addEventListener('DOMContentLoaded', () => {
   countryDisplay.innerHTML = up.name
 
   game.addEventListener('click', e => {
-    if (countryClicked(e)["hc-key"] == up.hc ){
-      // update the map
-      console.log(countryClicked(e))
+    let hcClicked = countryClicked(e)["hc-key"]
+    let indexClicked = _.findIndex(theMap.series[0].data, { 'hc-key': hcClicked })
 
+    if (hcClicked == up.hc ){
+      // update the map
+      theMap.series[0].data[indexClicked].update({color: '#25963E'})
+  
       // load up next country
       ci++
       up = theDeck[ci]
@@ -34,12 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     else {
+      theMap.series[0].data[indexClicked].update({color: '#B3362D'})
       feedback.innerHTML = '😞'
     }
-
-    // ok this will consistently recolor the faroe islands, so we need to map to correct data item to update
-    console.log(theMap.series[0].data[0].update({color: '#bada55'}))
-    //theMap.redraw()
     
   });
 }, false);

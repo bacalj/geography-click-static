@@ -1,3 +1,25 @@
-#container {
-    border:2px solid orange;
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100;300;500&family=Source+Serif+4&display=swap');
+
+body {
+    margin:0;
+    padding-top:20px;
+    background-color: #3c4350;
+}
+
+h1 {
+    font-family: 'Exo 2', sans-serif;
+    color:white;
+    text-align: center;
+}
+
+.click-prompt {
+    color:white;
+    text-align: center;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 24px;
+    font-weight: 100;
+}
+
+#country-display {
+    font-weight: 300;
 }
