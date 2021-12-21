@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const game = document.querySelector('#container')
   const countryDisplay = document.querySelector('#country-display')
   const feedback = document.querySelector('#feedback')
+  const skipper = document.querySelector('#skip')
 
   countryDisplay.innerHTML = ''
   feedback.innerHTML = ''
@@ -18,6 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const theDeck = allShuffled()
   var ci = 0
   let up = theDeck[ci]
+
+  function advance(){
+    ci++
+    up = theDeck[ci]
+    countryDisplay.innerHTML = up.name
+  }
   
   countryDisplay.innerHTML = up.name
 
@@ -30,9 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
       theMap.series[0].data[indexClicked].update({color: '#25963E'})
   
       // load up next country
-      ci++
-      up = theDeck[ci]
-      countryDisplay.innerHTML = up.name
+      advance()
       feedback.innerHTML = '😀'
     }
 
@@ -42,6 +47,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
   });
+
+  skipper.addEventListener('click', function(){
+    advance()
+  })
+
+
 }, false);
 
 

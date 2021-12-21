@@ -23,3 +23,24 @@ h1 {
 #country-display {
     font-weight: 300;
 }
+
+#skip {
+    text-align: center;
+    background-color: #3c4350;
+    color:white;
+    border: none;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#skip:hover {
+    text-decoration: underline;
+}
+
+#skip-wrap {
+    width: 80px;
+    text-align: center;
+    margin: 0 auto;
+}
