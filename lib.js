@@ -209,13 +209,8 @@ export function renderMap(){
     var theChart = Highcharts.mapChart('container', {
         chart: {
             map: 'custom/world-eckert3-highres',
-            backgroundColor: {
-                radialGradient: [0,0,0,0],
-                stops: [
-                    [0, '#3c4350'],
-                    [1, '#3c4350']
-                ]
-            },
+            backgroundColor: "#1C00ff00",
+            animation: false
         },
 
         tooltip: {
@@ -239,16 +234,18 @@ export function renderMap(){
             buttonOptions: {
                 verticalAlign: 'bottom',
                 theme: {
-                    'stroke-width': 0,                    
+                    'stroke-width': 1,                    
+                    'fill': '#fefefe',
+                    'stroke': '#483C32'
                 }
             }
         },
 
         colorAxis: {
-            tickPixelInterval: 100,
-            minColor: '#3c4350',
-            maxColor: '#3c4350',
-            max: 1
+            tickPixelInterval: 0,
+            minColor: '#fefefe', // color land brown
+            maxColor: '#fefefe',
+            max: 0
         },
 
         exporting: {
@@ -263,12 +260,15 @@ export function renderMap(){
             data: theData,
             states: {
                 hover: {
-                    color: '#10C135'
+                    fill: '#b92938',
+                    animation: false
                 }
             },
             dataLabels: {
                 enabled: false,
-            }
+            },
+            borderColor: '#483C32', // color border brown
+            borderWidth: 0.2,
         }]
     });
 

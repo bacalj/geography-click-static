@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (hcClicked == up.hc ){
       // update the map
-      theMap.series[0].data[indexClicked].update({color: '#25963E'})
+      theMap.series[0].data[indexClicked].update({color: '#29b962'}) // color correct green
   
       // load up next country
       advance()
@@ -42,7 +42,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     else {
-      theMap.series[0].data[indexClicked].update({color: '#B3362D'})
+      theMap.series[0].data[indexClicked].update({color: '#b92938'}) // color incorrect red
+      window.setTimeout(() => {
+        theMap.series[0].data[indexClicked].update({color: '#fefefe'}) // color land brown
+      }, 1000)
       feedback.innerHTML = '😞'
     }
     
