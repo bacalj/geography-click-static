@@ -20,12 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
   var ci = 0
   let up = theDeck[ci]
 
-  console.log(theDeck)
-
   function advance(){
-    console.log('from ', ci, ' to ', ci + 1)
+    //console.log('from ', ci, ' to ', ci + 1)
     ci++
-    if (ci == 201){
+    if (ci == 202){
       ci = 0
     }
     up = theDeck[ci]
