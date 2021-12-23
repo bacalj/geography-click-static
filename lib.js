@@ -235,16 +235,17 @@ export function renderMap(){
                 verticalAlign: 'bottom',
                 theme: {
                     'stroke-width': 1,                    
-                    'fill': '#fefefe',
-                    'stroke': '#483C32'
+                    'fill': '#ffffdb',
+                    'stroke': '#483C32',
+                    'stroke-width': .2
                 }
             }
         },
 
         colorAxis: {
             tickPixelInterval: 0,
-            minColor: '#fefefe', // color land brown
-            maxColor: '#fefefe',
+            minColor: '#ffffc2', // color land brown
+            maxColor: '#ffffc2',
             max: 0
         },
 
@@ -260,7 +261,7 @@ export function renderMap(){
             data: theData,
             states: {
                 hover: {
-                    fill: '#b92938',
+                    brightness: .99,
                     animation: false
                 }
             },
