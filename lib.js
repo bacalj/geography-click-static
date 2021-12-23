@@ -210,8 +210,8 @@ export function renderMap(){
         chart: {
             map: 'custom/world-eckert3-highres',
             backgroundColor: "#1C00ff00",
-            animation: false,
-            height: (9 / 16 * 100) + '%'
+            animation: false
+            //height: (9 / 16 * 100) + '%'
         },
 
         tooltip: {
