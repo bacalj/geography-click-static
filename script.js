@@ -30,7 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
   
   countryDisplay.innerHTML = countryUp.name
 
-  game.addEventListener('click', e => {
+  function handleClickTap(e){
+    e.preventDefault()
+
     let hcClicked = countryClicked(e)["hc-key"]
     let indexClicked = _.findIndex(theMap.series[0].data, { 'hc-key': hcClicked })
 
@@ -49,7 +51,14 @@ document.addEventListener('DOMContentLoaded', () => {
         theMap.series[0].data[indexClicked].update({color: '#ffffc2'}) // color land brown
       }, 1000)
     }
-    
+  }
+
+  game.addEventListener('click', e => {
+    handleClickTap(e)
+  });
+
+  game.addEventListener('touchstart', e => {
+    handleClickTap(e)
   });
 
   skipper.addEventListener('click', function(){
