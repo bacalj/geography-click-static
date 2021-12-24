@@ -244,7 +244,7 @@ export function renderMap(){
 
         colorAxis: {
             tickPixelInterval: 0,
-            minColor: '#ffffc2', // color land brown
+            minColor: '#ffffc2', // color land yellow
             maxColor: '#ffffc2',
             max: 0
         },
@@ -261,8 +261,9 @@ export function renderMap(){
             data: theData,
             states: {
                 hover: {
-                    brightness: .99,
-                    animation: false
+                    borderColor: "#040506",
+                    borderWidth: 1
+                    //animation: false
                 }
             },
             dataLabels: {
@@ -276,8 +277,11 @@ export function renderMap(){
     return theChart
 }
 
+/* collects feature data from map to generate a deck of "cards" */
 export function allShuffled(){
+    
     const featuresArr = window.Highcharts.MapChart.maps['custom/world-eckert3-highres'].features
+    
     let gameArr = featuresArr.map((feature) => {
         return {
             id: feature.id,
