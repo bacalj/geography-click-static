@@ -261,9 +261,8 @@ export function renderMap(){
             data: theData,
             states: {
                 hover: {
-                    borderColor: "#040506",
-                    borderWidth: 1
-                    //animation: false
+                    borderColor: "black",
+                    borderWidth: 2
                 }
             },
             dataLabels: {
