@@ -53,11 +53,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  game.addEventListener('click', e => {
+  game.addEventListener('touchstart', e => {
     handleClickTap(e)
   });
 
-  game.addEventListener('touchstart', e => {
+  game.addEventListener('click', e => {
     handleClickTap(e)
   });
 
