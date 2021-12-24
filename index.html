@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Geography Click</title>
+    
     <script src="https://unpkg.com/topojson-client@3"></script>
     <script src="https://code.highcharts.com/maps/highmaps.js"></script>
     <script src="https://code.highcharts.com/maps/modules/data.js"></script>
@@ -16,26 +18,24 @@
     <script src="lib.js" type="module"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
- 
-    
-        <div class="game">
-            <p class="click-prompt">Click on <b><span id="country-display"></span></p>
-            <div id="skip-wrap">
-                <button id="skip">skip</button>
-            </div>
-            <figure class="highcharts-figure">
-                <div id="container"></div>
-            </figure>
-            <div id="feedback" style="display: none;"></div>
 
+    <div class="game">
+        
+        <p class="click-prompt">Click on <b><span id="country-display"></span></p>
+
+        <div id="skip-wrap">
+            <button id="skip">skip</button>
         </div>
 
-  
+        <figure class="highcharts-figure">
+            <div id="container"></div>
+        </figure>
 
+    </div>
 
 </body>
 </html>

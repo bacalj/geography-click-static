@@ -10,7 +10,7 @@ body {
     background: #2980B9;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to top, #c3efff, #2980B9, #2171a7);  
     background: linear-gradient(to top, #c3efff, #2980B9, #2171a7); 
-    height: 1100px;
+    //height: 1100px;
 }
 
 h1 {
@@ -38,7 +38,7 @@ h1 {
     border: none;
     font-family: 'Exo 2', sans-serif;
     font-weight: 100;
-    font-size: 18px;
+    font-size: 20px;
     cursor: pointer;
 }
 
@@ -51,20 +51,3 @@ h1 {
     text-align: center;
     margin: 0 auto;
 }
-
-/* colors reference 
-
-nice blue gradient
-background: -webkit-linear-gradient(to top, #FFFFFF, #6DD5FA, #2980B9);  
-background: linear-gradient(to top, #FFFFFF, #6DD5FA, #2980B9); 
-
-land brown #C7B34C
-
-boder brown
-
-correct green: #24D131
-
-wrong red: #C74922
-
-
-*/

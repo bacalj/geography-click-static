@@ -9,48 +9,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const game = document.querySelector('#container')
   const countryDisplay = document.querySelector('#country-display')
-  const feedback = document.querySelector('#feedback')
   const skipper = document.querySelector('#skip')
 
   countryDisplay.innerHTML = ''
-  feedback.innerHTML = ''
   
   let theMap = renderMap()
   const theDeck = allShuffled()
-  var ci = 0
-  let up = theDeck[ci]
+  var countryIndex = 0
+  let countryUp = theDeck[countryIndex]
 
   function advance(){
-    //console.log('from ', ci, ' to ', ci + 1)
-    ci++
-    if (ci == 202){
-      ci = 0
+    countryIndex++
+    if (countryIndex == 202){
+      countryIndex = 0
     }
-    up = theDeck[ci]
-    countryDisplay.innerHTML = up.name
+    countryUp = theDeck[countryIndex]
+    countryDisplay.innerHTML = countryUp.name
   }
   
-  countryDisplay.innerHTML = up.name
+  countryDisplay.innerHTML = countryUp.name
 
   game.addEventListener('click', e => {
     let hcClicked = countryClicked(e)["hc-key"]
     let indexClicked = _.findIndex(theMap.series[0].data, { 'hc-key': hcClicked })
 
-    if (hcClicked == up.hc ){
-      // update the map
-      theMap.series[0].data[indexClicked].update({color: '#3fd97c'}) // color correct green
+    if (hcClicked == countryUp.hc ){
+      
+      // countryUpdate the map
+      theMap.series[0].data[indexClicked].countryUpdate({color: '#3fd97c'}) // color correct green
   
-      // load up next country
+      // load next country
       advance()
-      feedback.innerHTML = '😀'
     }
 
     else {
-      theMap.series[0].data[indexClicked].update({color: '#e65e6c'}) // color incorrect red
+      theMap.series[0].data[indexClicked].countryUpdate({color: '#e65e6c'}) // color incorrect red
       window.setTimeout(() => {
-        theMap.series[0].data[indexClicked].update({color: '#ffffc2'}) // color land brown
+        theMap.series[0].data[indexClicked].countryUpdate({color: '#ffffc2'}) // color land brown
       }, 1000)
-      feedback.innerHTML = '😞'
     }
     
   });
