@@ -4,9 +4,5 @@ I have big plans for this domain, but Netlify's "dusty domains" charity event ca
 
 ## thanks to
 
-Highcharts.js
-restcountries api
-
-## also
-
-No front-end JavaScript frameworks were harmed in the creation of this project
+[Highcharts.js](https://www.highcharts.com/docs/index)
+[Restcountries API](https://restcountries.com/)
