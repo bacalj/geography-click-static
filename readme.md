@@ -1,6 +1,8 @@
 # geography.click
 
-I have big plans for this domain, but Netlify's "dusty domains" charity event came along so I thought the best idea would be to put this together and get it up.
+Netlify's ["dusty domains"](https://dusty.domains/) charity event came along so I'm getting this out the door in less-than-perfect shape.  
+
+I am working on finding a map with Palestinian Territories that works with Highcharts that does not have a super-distored projection.  If you know of one, let me know. 
 
 ## thanks to
 
