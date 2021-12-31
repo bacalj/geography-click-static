@@ -23,14 +23,10 @@ body {
     font-weight: 100;
 }
 
-#country-display {
-    font-weight: 300;
-}
-
 #skip {
     text-align: center;
     background-color: transparent;
-    color:rgb(174, 179, 184);
+    color:rgb(219, 226, 233);
     border: none;
     font-family: 'Exo 2', sans-serif;
     font-weight: 100;
@@ -42,6 +38,12 @@ body {
     text-decoration: underline;
 }
 
-.grayer {
-    color:rgb(174, 179, 184);
+.clikon {
+    color:rgb(219, 226, 233);
+    font-weight: 100;
+}
+
+#country-display {
+    font-weight: 300;
+    font-size:30px;
 }

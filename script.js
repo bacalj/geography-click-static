@@ -31,24 +31,20 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       countryUp = theDeck[countryIndex]
 
-      const fullName = buildName(countryUp).then((arr) => {
-        let asString = arr.join(' / ')
-        //console.log("INIT: ", asString)
+      buildName(countryUp).then((arr) => {
+        let uniqued = _.uniq(arr)
+        let asString = uniqued.join(' / ')
         countryDisplay.innerHTML = asString
       })
-      
-      
-      //countryDisplay.innerHTML = fullName
-      
+            
     }
     
-    const fullName = buildName(countryUp).then((arr) => {
-      let asString = arr.join(' / ')
-      //console.log("INIT: ", asString)
+    /* not dry but gotta init */
+    buildName(countryUp).then((arr) => {
+      let uniqued = _.uniq(arr)
+      let asString = uniqued.join(' / ')
       countryDisplay.innerHTML = asString
     })
-
-   // 
 
     function handleClickTap(e){
       e.preventDefault()
