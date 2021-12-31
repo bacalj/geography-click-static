@@ -2,7 +2,8 @@
 import { 
   renderMap, 
   allShuffled, 
-  countryClicked
+  countryClicked,
+  buildName
 } from './lib.js'
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -23,16 +24,31 @@ document.addEventListener('DOMContentLoaded', () => {
     var countryIndex = 0
     let countryUp = theDeck[countryIndex]
 
-    function advance(){
+    async function advance(){
       countryIndex++
       if (countryIndex == 202){
         countryIndex = 0
       }
       countryUp = theDeck[countryIndex]
-      countryDisplay.innerHTML = countryUp.name
+
+      const fullName = buildName(countryUp).then((arr) => {
+        let asString = arr.join(' / ')
+        //console.log("INIT: ", asString)
+        countryDisplay.innerHTML = asString
+      })
+      
+      
+      //countryDisplay.innerHTML = fullName
+      
     }
     
-    countryDisplay.innerHTML = countryUp.name
+    const fullName = buildName(countryUp).then((arr) => {
+      let asString = arr.join(' / ')
+      //console.log("INIT: ", asString)
+      countryDisplay.innerHTML = asString
+    })
+
+   // 
 
     function handleClickTap(e){
       e.preventDefault()

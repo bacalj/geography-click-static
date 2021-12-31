@@ -263,7 +263,8 @@ export function renderMap(){
             states: {
                 hover: {
                     borderColor: "black",
-                    borderWidth: 2
+                    borderWidth: 2,
+                    brightness: .2
                 }
             },
             dataLabels: {
@@ -298,4 +299,27 @@ export function allShuffled(){
 
 export function countryClicked(e){
     return e.point.properties
+}
+
+export async function buildName(obj){
+
+    const endpoint = `https://restcountries.com/v3.1/alpha/${obj.id}?fields=name`
+
+    let nativeNamesArr = await fetch(endpoint)
+        .then( r => r.json())
+        .then( d => {
+            let langsArr = Object.keys(d.name.nativeName)
+            let nativeNames = langsArr.map( key => d.name.nativeName[key].common )
+            return nativeNames
+        }).then( (ns) => {
+            return ns
+        })
+
+    if(!nativeNamesArr.includes(obj.name)){
+        nativeNamesArr.push(obj.name)
+    }
+     
+    return await nativeNamesArr
+
+
 }
