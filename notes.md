@@ -26,3 +26,5 @@
     }
 }
 ```
+
+https://dusty.domains/thanks/www.geography.click
