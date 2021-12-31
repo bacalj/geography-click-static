@@ -7,4 +7,5 @@ I am working on finding a map with Palestinian Territories that works with Highc
 ## thanks to
 
 [Highcharts.js](https://www.highcharts.com/docs/index)
+
 [Restcountries API](https://restcountries.com/)
