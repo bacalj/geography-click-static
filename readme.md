@@ -9,3 +9,5 @@ I am working on finding a map with Palestinian Territories that works with Highc
 [Highcharts.js](https://www.highcharts.com/docs/index)
 
 [Restcountries API](https://restcountries.com/)
+
+[FontAwesome (license)](https://fontawesome.com/license)

@@ -2,8 +2,8 @@
 
 body {
     background: #2980B9;  
-    background: -webkit-linear-gradient(to top, #c3efff, #2980B9, #2171a7);  
-    background: linear-gradient(to top, #c3efff, #2980B9, #2171a7); 
+    background: -webkit-linear-gradient(to top, #8bd6f1, #2980B9, #116297);  
+    background: linear-gradient(to top, #8bd6f1, #2980B9, #116297); 
     color:white;
     text-align: center;
     font-family: 'Exo 2', sans-serif;
@@ -46,4 +46,22 @@ body {
 #country-display {
     font-weight: 300;
     font-size:30px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    text-align:center;
+    width:100%;
+    padding-bottom:20px;
+}
+
+.footer a {
+    text-decoration: none;
+    padding:5px;
+}
+
+.footer svg {
+    width:20px;
+    color:white;
 }
