@@ -1,5 +1,7 @@
 # geography.click
 
+https://www.geography.click
+
 Netlify's ["dusty domains"](https://dusty.domains/) charity event came along so I'm getting this out the door in less-than-perfect shape. 
 
 
